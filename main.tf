@@ -12,3 +12,12 @@ terraform {
 provider "aws" {
   region  = "us-east-1"
 }
+
+
+terraform {
+  backend "s3" {
+    bucket = "aws-terraform-state-storage"
+    key    = "quizhero-aws-network/terraform.tfstate"
+    region = "us-east-1"
+  }
+}

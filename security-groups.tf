@@ -100,11 +100,3 @@ resource "aws_security_group_rule" "quizhero_security_group_rule" {
   protocol = "-1"
   cidr_blocks = ["0.0.0.0/0"]
 }
-
-resource "aws_db_subnet_group" "quizhero_db_subnet_group" {
-  name = "quizhero-db-subnet-group"
-  subnet_ids = [
-    aws_subnet.quizhero_subnet_1.id,
-    aws_subnet.quizhero_subnet_2.id,
-    ]
-}
