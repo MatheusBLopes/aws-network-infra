@@ -20,12 +20,12 @@ resource "aws_network_acl" "network_acl" {
   }
 }
 
-resource "aws_network_acl_association" "network_acl_association" {
+resource "aws_network_acl_association" "network_acl_association_1" {
   subnet_id = aws_subnet.public-us-east-1a.id
   network_acl_id = aws_network_acl.network_acl.id
 }
 
-resource "aws_network_acl_association" "network_acl_association" {
+resource "aws_network_acl_association" "network_acl_association_2" {
   subnet_id = aws_subnet.public-us-east-1b.id
   network_acl_id = aws_network_acl.network_acl.id
 }
